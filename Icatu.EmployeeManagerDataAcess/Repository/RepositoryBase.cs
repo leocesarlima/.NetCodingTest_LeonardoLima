@@ -13,14 +13,19 @@ namespace Icatu.EmployeeManagerDataAcess.Repository
 
         public RepositoryBase()
         {
-            Context = new Context();
+            var optionsBuilder = new DbContextOptionsBuilder<Context>();
+            var connection = @"Server=(localdb)\mssqllocaldb;Database=EmployeeManager;Trusted_Connection=True;ConnectRetryCount=0";
+
+            optionsBuilder.UseSqlServer(connection);
+
+            Context = new Context(optionsBuilder.Options);
         }
 
         public bool Save(TEntity obj)
         {
             try
             {
-                Context.Entry(obj).State = EntityState.Added;
+                Context.Add(obj);
                 return Convert.ToBoolean(Context.SaveChanges());
             }
             catch (Exception e)
@@ -33,7 +38,7 @@ namespace Icatu.EmployeeManagerDataAcess.Repository
         {
             try
             {
-                Context.Entry(obj).State = EntityState.Modified;
+                Context.Update(obj);
                 return Convert.ToBoolean(Context.SaveChanges());
             }
             catch (Exception e)

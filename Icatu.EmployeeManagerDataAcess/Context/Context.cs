@@ -3,17 +3,15 @@ using Icatu.EmployeeManagerDomain.Entities;
 
 namespace Icatu.EmployeeManagerDataAcess
 {
-    public class Context: DbContext
+    public class Context : DbContext
     {
-        public DbSet<Employee> Employee { get; set; }
-        public DbSet<Department> Department { get; set; }
+        public Context(DbContextOptions<Context> options)
+            : base(options)
+        { }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=EmployeeManager;Integrated Security=True;MultipleActiveResultSets=true;");
-            }
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=EmployeeManager;Trusted_Connection=True;ConnectRetryCount=0");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -51,6 +49,8 @@ namespace Icatu.EmployeeManagerDataAcess
             });
         }
 
-        
+        public DbSet<Employee> Employee { get; set; }
+        public DbSet<Department> Department { get; set; }
+
     }
 }

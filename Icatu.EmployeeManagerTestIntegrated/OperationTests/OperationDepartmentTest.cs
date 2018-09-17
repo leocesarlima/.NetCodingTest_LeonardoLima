@@ -11,8 +11,8 @@ namespace Icatu.EmployeeManagerIntegratedTest.OperationTests
         [Test, TestCaseSource(typeof(DepartmentMock), "Department")]
         public void WhenSaveDepartmentShouldReturnSuccess(Department department)
         {
-            var sucesso = OperationDepartment.Save(department);
-            Assert.IsTrue(sucesso, "Error saving Department.");
+            var sucess = OperationDepartment.Save(department);
+            Assert.IsTrue(sucess, "Error saving Department.");
         }
 
         [Test]

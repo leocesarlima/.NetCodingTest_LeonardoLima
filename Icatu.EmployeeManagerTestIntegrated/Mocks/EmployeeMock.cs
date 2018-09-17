@@ -32,7 +32,7 @@ namespace Icatu.EmployeeManagerIntegratedTest.Mocks
 
         public static void AddDepartment(Employee employee)
         {
-            employee.Id = DepartmentMock.Department.Id;
+            employee.IdDepartament = DepartmentMock.Department.Id;
         }
     }
 }
