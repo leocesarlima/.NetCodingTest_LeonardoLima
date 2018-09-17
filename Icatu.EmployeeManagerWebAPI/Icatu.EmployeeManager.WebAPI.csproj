@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="8.0.100" />
+    <PackageReference Include="Mapster" Version="3.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Icatu.EmployeeManagerBusiness\Icatu.EmployeeManager.Business.csproj" />
+    <ProjectReference Include="..\Icatu.EmployeeManagerDomain\Icatu.EmployeeManager.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
