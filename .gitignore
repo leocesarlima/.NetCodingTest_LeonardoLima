@@ -3,3 +3,15 @@
 ################################################################################
 
 /Icatu.EmployeeManagerBusiness/bin/Debug/netcoreapp2.1
+/Icatu.EmployeeManagerBusiness/obj/Debug
+/Icatu.EmployeeManagerWebAPI/obj
+/Icatu.EmployeeManagerWebAPI/bin/Debug/netcoreapp2.1
+/Icatu.EmployeeManagerTestUnit/obj
+/Icatu.EmployeeManagerTestUnit/bin/Debug/netcoreapp2.1
+/Icatu.EmployeeManagerTestIntegrated/obj
+/Icatu.EmployeeManagerTestIntegrated/bin/Debug/netcoreapp2.1
+/Icatu.EmployeeManagerDomain/obj
+/Icatu.EmployeeManagerDomain/bin/Debug
+/Icatu.EmployeeManagerDataAcess/obj
+/Icatu.EmployeeManagerDataAcess/bin/Debug
+/.vs/Icatu.EmployeeManager
